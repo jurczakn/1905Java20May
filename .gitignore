@@ -1,0 +1,44 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+**/pull_request_template.md
+**/issue_template.md
+**/target/
+**/bin/
+**/META-INF/**
+
+#Eclipse
+**/.metadata
+**/.settings/
+**/.classpath
+**/.recommenders/**
+**/Servers
+**/.springBeans
+
+#IDEA
+**/.idea/
+**/*.iml
+
+#properties
+**/*.properties
