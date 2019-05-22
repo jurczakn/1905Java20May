@@ -52,6 +52,12 @@ public class Food {
 		this.cost = cost;
 	}
 	
+	public Food eat() {
+		System.out.println("You just ate " + this.amount + " pounds of " + this.type);
+		this.amount = 0.0;
+		return this;
+	}
+	
 	//Constructor is used to create an instance of a class, an object
 	//Invoked by using the new keyword
 	//    V------does not a return type
