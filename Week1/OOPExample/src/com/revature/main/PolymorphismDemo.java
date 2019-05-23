@@ -2,6 +2,7 @@ package com.revature.main;
 
 import com.revature.kitchen.ChineseFood;
 import com.revature.kitchen.Food;
+import com.revature.kitchen.MexicanFood;
 
 public class PolymorphismDemo {
 	
@@ -26,6 +27,18 @@ public class PolymorphismDemo {
 		//food3.cook();
 		//((ChineseFood)food3).cook();
 		//food3.cook();
+		
+		System.out.println(food);
+		System.out.println(food2);
+		System.out.println(food3);
+		Food foodCopy = new Food("Italian", "Yellowish", "amazing", 3.0, 3.0);
+		foodCopy.eat();
+		System.out.println(food.equals(foodCopy));
+		foodCopy.setSmell("Terrible");
+		System.out.println(food.getSmell());
+		System.out.println(foodCopy.getSmell());
+		System.out.println(food.equals(foodCopy));
+		Object o = new Food();
 	}
 
 }

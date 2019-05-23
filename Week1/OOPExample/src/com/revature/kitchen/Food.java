@@ -58,6 +58,45 @@ public class Food {
 		return this;
 	}
 	
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+		Food food = null;
+		if (!(obj instanceof Food)) {
+			return false;
+		} else {
+			food = (Food) obj;
+		}
+		if (!(this.getSmell().equals(food.getSmell()))) {
+			return false;
+		} else if (!(this.getType().equals(food.getType()))) {
+			return false;
+		} else if (!(this.getColor().equals(food.getColor()))) {
+			return false;
+		} else if (this.getAmount() != food.getAmount()) {
+			return false;
+		} else if (this.getCost() != food.getCost()) {
+			return false;
+		}
+		
+		return true;
+		
+	}
+
+	@Override
+	public String toString() {
+		String ret = "";
+		ret += "Food: ";
+		ret += "Type - " + this.getType();
+		ret += ", Color - " + this.getColor();
+		ret += ", Smell - " + this.getSmell();
+		ret += ", Amount - " + this.getAmount();
+		ret += ", Cost - " + this.getCost();
+		
+		return ret;
+	}
+
 	//Constructor is used to create an instance of a class, an object
 	//Invoked by using the new keyword
 	//    V------does not a return type
