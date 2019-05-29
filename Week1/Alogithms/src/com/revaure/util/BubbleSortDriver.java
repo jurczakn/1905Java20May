@@ -5,7 +5,7 @@ import java.io.ObjectInputStream.GetField;
 public class BubbleSortDriver {
 
 	public static void main(String[] args) {
-		int[] arr = generateArr(1000);
+		int[] arr = generateArr(10000);
 		System.out.println("Starting arr: ");
 		//System.out.println("first element " + arr[0]);
 		//System.out.println(arr);
@@ -26,11 +26,13 @@ public class BubbleSortDriver {
 	}
 	
 	private static void printArr(int[] arr) {
-		String sb = "";
 		for (int i = 0; i < arr.length; i++) {
-			sb += (arr[i] + ", ");
+			System.out.print(arr[i] + ", ");
+			if ((i+1)%10 == 0) {
+				System.out.println();
+			}
 		}
-		System.out.println(sb);
+		System.out.println();
 	}
 
 }
