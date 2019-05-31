@@ -9,5 +9,7 @@ public interface Stack {
 	public Object peek();
 	
 	public boolean empty();
+	
+	public boolean contains(Object o);
 
 }

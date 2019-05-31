@@ -53,5 +53,21 @@ public class ArrayQueue implements Queue {
 		}
 	}
 
+	@Override
+	public boolean contains(Object o) {
+
+		for (Object o2 : this.queue) {
+			
+			if (o2 == null) {
+				return false;
+			}
+			
+			if (o2.equals(o)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 
 }

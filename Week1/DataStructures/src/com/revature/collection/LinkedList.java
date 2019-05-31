@@ -9,5 +9,7 @@ public interface LinkedList {
 	public void remove(int index);
 	
 	public Object get(int index);
+	
+	public boolean contains(Object o);
 
 }

@@ -56,4 +56,20 @@ public class ArrayStack implements Stack {
 		}
 	}
 
+	@Override
+	public boolean contains(Object o) {
+		
+		for (Object o1 : this.stack) {
+			
+			if (o1 == null) {
+				return false;
+			}
+			
+			if (o1.equals(o)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

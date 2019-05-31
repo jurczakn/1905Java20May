@@ -9,5 +9,7 @@ public interface Queue {
 	public Object poll();
 	
 	public boolean empty();
+	
+	public boolean contains(Object o);
 
 }

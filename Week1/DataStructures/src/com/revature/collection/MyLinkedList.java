@@ -66,4 +66,22 @@ public class MyLinkedList implements LinkedList {
 		}
 	}
 
+	@Override
+	public boolean contains(Object o) {
+
+		Node n = this.start;
+		
+		if (n==null) {
+			return false;
+		}
+		
+		do {
+			if (n.value.equals(o)) {
+				return true;
+			}
+		} while ((n = n.next) != null);
+		
+		return false;
+	}
+
 }
