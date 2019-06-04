@@ -39,30 +39,43 @@ public class OverloadingExampleDriver {
 	 * return x + y; }
 	 */
 	
-	public int newAdd(Integer x, Integer y) {
-		System.out.println("Donald is right");
-		return x + y;
-	}
+	/*
+	 * public int newAdd(Integer x, Integer y) { System.out.println("Integer");
+	 * return x + y; }
+	 */
 	
-	public double newAdd(double x, double y) {
-		return x + y;
-	}
+	/*
+	 * public double newAdd(double x, double y) { System.out.println("double");
+	 * return x + y; }
+	 */
 	
-	public Double newAdd(Double x, Double y) {
-		return x + y;
-	}
 	
-	public int newAdd(int...i) {
-		return i[0] + i[1];
-	}
+	  public Double newAdd(Double x, Double y) { System.out.println("Double");
+	  return x + y; }
+	 
 	
-	public Integer newAdd(Integer...i) {
-		return i[0] + i[1];
-	}
 	
-	public double newAdd(double...i) {
-		return i[0] + i[1];
-	}
+	/*
+	 * public int newAdd(int...i) { System.out.println("int var args"); return i[0]
+	 * + i[1]; }
+	 */
+	 
+	
+	
+	/*
+	 * public Integer newAdd(Integer...i) { System.out.println("Integer var args");
+	 * return i[0] + i[1]; }
+	 */
+	 
+	
+	
+	
+	/*
+	 * public double newAdd(double...i) { System.out.println("double var args");
+	 * return i[0] + i[1]; }
+	 */
+	 
+	 
 	
 	public Integer divide(Integer x, Integer y) {
 		return x/y;
