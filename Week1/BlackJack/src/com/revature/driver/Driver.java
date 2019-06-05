@@ -30,6 +30,7 @@ public class Driver {
 			System.out.println("Would you like to play again? yes[1] no[2]");
 			cont = InputUtil.getNumber(1, 2);
 		} while (cont != 2);
+		gameService.endGame(game);
 	}
 
 }
