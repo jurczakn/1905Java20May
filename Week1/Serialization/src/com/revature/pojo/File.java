@@ -11,7 +11,8 @@ public class File implements Serializable {
 	
 	private LocalDateTime dateLastEdited;
 	
-	private String owner;
+	//      vvvvvv------ Stops Java from serializing this field
+	private transient String owner;
 	
 	private String content;
 
