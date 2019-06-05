@@ -9,6 +9,9 @@ public class PlayerServiceImpl implements PlayerService {
 
 	@Override
 	public void dealCard(Player p, Card c) {
+		if (p.getHand() == null) {
+			resetHand(p);
+		}
 		p.getHand().add(c);
 	}
 

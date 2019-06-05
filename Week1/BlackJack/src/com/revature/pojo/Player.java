@@ -1,5 +1,6 @@
 package com.revature.pojo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
@@ -26,6 +27,8 @@ public class Player {
 
 	public Player() {
 		super();
+		this.hand = new ArrayList<Card>();
+		this.score = 0;
 	}
 
 	public Player(List<Card> hand, Integer score) {
