@@ -8,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
+import com.revature.util.ConnectionFactory;
+
 public class CallableDriver {
 
 	private static String username = "";
@@ -16,7 +18,8 @@ public class CallableDriver {
 	
 	public static void main(String[] args) {
 		
-		try (Connection conn = DriverManager.getConnection(url, username, password)){
+		try {//Connection conn = DriverManager.getConnection(url, username, password)){
+			Connection conn = ConnectionFactory.getConnection();
 			conn.setAutoCommit(false);
 			String sql = "{call expensive_tracks_proc(?)}";
 			CallableStatement call = conn.prepareCall(sql);
