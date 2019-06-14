@@ -79,7 +79,7 @@ select name, unitprice from track where unitprice > .98;
 
 --cursor works like a pointer to a table
 --create a cursor, then open it to populate it with a result set
-create or replace function expensive_tracks_proc(in cost numeric(10, 2), inout curs refcursor)
+create or replace function expensive_tracks_proc(in cost double precision, out curs refcursor)
 as $$
 begin 
 	open curs for select name, unitprice from track where unitprice > cost;

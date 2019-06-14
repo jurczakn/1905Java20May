@@ -42,3 +42,5 @@ hs_err_pid*
 
 #properties
 **/*.properties
+
+#This is how you add to your gitignore file
