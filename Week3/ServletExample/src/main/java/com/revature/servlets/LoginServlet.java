@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.revature.pojos.User;
 import com.revature.services.UserService;
@@ -31,7 +32,10 @@ public class LoginServlet extends HttpServlet{
 			resp.getWriter().write("Falied Login");
 		} else {
 			//resp.getWriter().write("Successful Login");
-			req.getRequestDispatcher("home").forward(req, resp);
+			//req.getRequestDispatcher("home").forward(req, resp);
+			HttpSession sess = req.getSession(true);
+			sess.setAttribute("user", user);
+			resp.sendRedirect("home");
 		}
 		
 	}

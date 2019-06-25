@@ -31,5 +31,15 @@
 		<servlet-name>homeServlet</servlet-name>
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>lifeCycleServlet</servlet-name>
+		<servlet-class>com.revature.servlets.LifeCycleServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>lifeCycleServlet</servlet-name>
+		<url-pattern>/life</url-pattern>
+	</servlet-mapping>
 
 </web-app>
