@@ -5,11 +5,28 @@
 <title>Pets</title>
 </head>
 <body>
-
-	<h1>My Pets</h1>
-	<br>
-	<p id="pet-list">Loading...</p>
-
-<script type="text/javascript" src="js/pets.js"></script>
+	<div>
+		<h1>My Pets</h1>
+		<br>
+		<p id="pet-list">Loading...</p>
+	</div>
+	<div>
+		<input type="text" id="pet-name-input" placeholder="pet name" /> <br>
+		<p id="my-pet"></p>
+		<br>
+		<button id="get-pet">View My Pet</button>
+	</div>
+	<div>
+		<h3>Add a New Pet</h3>
+		<input id="name" placeholder="enter animal name"> 
+		<br>
+		<input id="breed" placeholder="enter animal breed"> 
+		<br>
+		<input id="age" type="number" placeholder="enter animal age">
+		<br>
+		<button id="postAnimal">Create Animal</button>
+		<p id="result"></p>
+	</div>
+	<script type="text/javascript" src="js/pets.js"></script>
 </body>
 </html>

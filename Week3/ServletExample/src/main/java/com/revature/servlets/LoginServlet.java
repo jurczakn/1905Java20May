@@ -41,7 +41,11 @@ public class LoginServlet extends HttpServlet {
 			// req.getRequestDispatcher("home").forward(req, resp);
 			HttpSession sess = req.getSession(true);
 			sess.setAttribute("user", user);
-			resp.sendRedirect("home");
+			if ("dinosour".equals(user.getUsername())) {
+				resp.sendRedirect("adminhome");
+			} else {
+				resp.sendRedirect("home");
+			}
 		}
 
 	}

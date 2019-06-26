@@ -2,6 +2,8 @@ package com.revature.servlets;
 
 import java.io.IOException;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,7 +31,11 @@ public class HomeServlet extends HttpServlet{
 		System.out.println("username" + username + " password: " + password);
 		//User user = us.loginUser(username, password);
 		if (user != null) {
-			resp.getWriter().write("<h1>Welcome " + user.getFullname() + " </h1><br><a href=\"pets.html\">my pets</a><br><a href=\"logout\">logout</a>");
+			ServletContext context = getServletContext();
+			String welcomeMessage = context.getInitParameter("welcomeMessage");
+			ServletConfig config = getServletConfig();
+			String userType = config.getInitParameter("userType");
+			resp.getWriter().write("<h1>" + welcomeMessage + " " + userType + " "+ user.getFullname() + " </h1><br><a href=\"pets.html\">my pets</a><br><a href=\"logout\">logout</a>");
 		}
 	}
 	
