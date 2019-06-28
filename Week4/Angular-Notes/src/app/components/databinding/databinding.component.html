@@ -1,0 +1,73 @@
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">
+            {{title}} {{interpolationNotation}}
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Used for <strong>one-way</strong> databinding to a <strong>value</strong>
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    You can also evaluate using {{interpolationNotation}} as well
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    99 + 101 <strong>=</strong> {{99+101}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">
+            Property Binding {{propertyNotation}}
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Changes the attributes of a node on the changes of a property.
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    <div [ngStyle]='styleState'>
+                        Look at my Style!!!!!
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">
+            Event Binding {{eventNotation}}
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Used for event handling.
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Click the button to increment the value: {{counter}}
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    <button class="btn btn-primary btn-center" (click)="addToCounter()">
+                        increment
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

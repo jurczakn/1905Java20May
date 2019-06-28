@@ -7,6 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabindingComponent implements OnInit {
 
+  title = `Interpolation`;
+
+  interpolationNotation = `{{}}`;
+
+  propertyNotation = `[]`;
+
+  eventNotation = `()`;
+
+  counter = 0;
+
+  styleState = {
+    color: `green`,
+    backgroundColor: `pink`,
+    border: `1px solid black`,
+    cursor: `pointer`,
+    margin: `2px`
+  }
+
+  addToCounter(): void {
+    this.counter++;
+  }
+
   constructor() { }
 
   ngOnInit() {
