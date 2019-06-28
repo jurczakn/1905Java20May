@@ -70,4 +70,29 @@
             </div>
         </div>
     </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">
+            Two Way Binding {{twoWayNotation}}
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    User {{twoWayNotation}} with ngModel to attain two-way data binding.
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    <input type="text" placeholder="Enter Text" [(ngModel)]="text"/>
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Text: {{text}}
+                    <button class="btn btn-primary btn-center" (click)="clearText()">Clear</button>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>

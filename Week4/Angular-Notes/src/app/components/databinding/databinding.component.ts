@@ -15,7 +15,11 @@ export class DatabindingComponent implements OnInit {
 
   eventNotation = `()`;
 
+  twoWayNotation = `[()]`;
+
   counter = 0;
+
+  text = 'Please enter some text';
 
   styleState = {
     color: `green`,
@@ -27,6 +31,10 @@ export class DatabindingComponent implements OnInit {
 
   addToCounter(): void {
     this.counter++;
+  }
+
+  clearText(): void {
+    this.text = '';
   }
 
   constructor() { }

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructuralComponent implements OnInit {
 
+  dogList: Array<String> = [`pitbull`, `corgi`, `german shepard`, `shitzu`, `chuwawa`];
+
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,40 @@
+<div class="panel-heading">
+    <span class="label label-default label-center">
+        Structural Directives
+    </span>
+</div>
+<div class="panel-body">
+    <div class="list-group">
+        <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                Change the physical structure of the HTML page.
+            </span>
+        </div>
+        <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                Always begins with <strong>*</strong> character.
+            </span>
+        </div>
+        <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                Includes the *ngFor, *ngIf, and *ngSwitch
+            </span>
+        </div>
+        <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                Allows you to loop through an array.
+            </span>
+        </div>
+        <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                <div *ngFor="let d of dogList; let i = index">
+                    <div class="list-group-item">
+                        <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                            {{i + 1}}: {{d}}
+                        </span>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
