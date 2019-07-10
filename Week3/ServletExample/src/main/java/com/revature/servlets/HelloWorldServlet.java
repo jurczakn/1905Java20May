@@ -14,7 +14,7 @@ public class HelloWorldServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		System.out.println("Hello World!!!!");
 		PrintWriter pw = resp.getWriter();
-		pw.write("Hello World from servlet doGet method!!!!!");
+		pw.write("THIS SHOULD TRIGGER A NEW JENKINS BUILD!!!!!");
 	}
 	
 	@Override
