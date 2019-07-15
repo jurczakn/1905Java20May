@@ -3,14 +3,23 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		
+
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.connection.pool_size">5</property>
-		
-		<mapping class="com.revature.domains.HoneyPot"/>
-		<mapping class="com.revature.domains.Bear"/>
-		<mapping class="com.revature.domains.Cave"/>
-		
+
+
+		<!-- Level 2 Cache -->
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<!-- Specify caching provider -->
+		<property name="hibernate.cache.region.factory_class">
+			org.hibernate.cache.ehcache.EHCacheRegionFactory
+		</property>
+
+		<mapping class="com.revature.domains.HoneyPot" />
+		<mapping class="com.revature.domains.Bear" />
+		<mapping class="com.revature.domains.Cave" />
+
+
 	</session-factory>
 </hibernate-configuration>

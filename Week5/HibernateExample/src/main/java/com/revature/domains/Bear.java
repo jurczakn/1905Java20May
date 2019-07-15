@@ -15,6 +15,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -24,6 +26,10 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Table(name="BEAR")
+@NamedQueries({
+	@NamedQuery(name="get_small_bears", query="FROM Bear as b WHERE b.weight < 200"),
+	@NamedQuery(name="get_large_bears", query="FROM Bear as b WHERE b.weight > :amount")
+})
 @Cache(region="myAwesomeCache", usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Bear {
 	
