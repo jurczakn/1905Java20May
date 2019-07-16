@@ -40,10 +40,11 @@ public class Driver {
 		//window2.setOpen(true);
 		window2.setSize("Big");
 		window2.setType("Square");
-		log.log(Level.INFO, "Look at our new house: " + house2);
-		log.log(Level.INFO, "Look at our new house: " + house);
-		log.log(Level.INFO, "Default Window: " + ac.getBean("window"));
-		
+		//log.log(Level.INFO, "Look at our new house: " + house2);
+		//log.log(Level.INFO, "Look at our new house: " + house);
+		//log.log(Level.INFO, "Default Window: " + ac.getBean("window"));
+		ac.getBean("lifecycleBean");
+		System.exit(0);
 
 	}
 
