@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="house" class="com.revature.beans.House" scope="prototype">
+		<!-- Set up Bean Wiring -->
+		<property name="window" ref="window"></property>
+	</bean>
+	<bean id="window" class="com.revature.beans.StandardWindow" scope="prototype">
+		<property name="size" value="medium"></property>
+		<property name="open" value="true"></property>
+		<property name="type" value="octagonal"></property>
+	</bean>
+	<bean id="brokenWindow" class="com.revature.beans.BrokenWindow"></bean>
+
+</beans>
