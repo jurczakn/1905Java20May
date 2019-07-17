@@ -24,7 +24,7 @@ public class UserController {
 		this.userService = userService;
 	}
 	
-	@GetMapping
+	@GetMapping("/user")
 	public List<User> getAllUsers() {
 		return userService.getAllUsers();
 	}
@@ -34,7 +34,7 @@ public class UserController {
 		return userService.getUserByUsername(username);
 	}
 	
-	@PostMapping(consumes = "application/json")
+	@PostMapping(consumes = "application/json", value = "/user")
 	public String makeUser(@RequestBody User user) {
 		userService.registerUser(user);
 		return "success";

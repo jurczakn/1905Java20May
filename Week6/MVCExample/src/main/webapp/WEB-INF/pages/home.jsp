@@ -8,6 +8,8 @@
 <title>Home Page</title>
 </head>
 <body>
-	<h1>Welcome to the Home Page</h1>
+	<h1>Welcome <c:out value="${ user.getFullName() }"></c:out> to Your Homepage</h1>
+	<a href="help">Help</a>\
+	<a href="logout">Logout</a>
 </body>
 </html>

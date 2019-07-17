@@ -1,9 +1,12 @@
 package com.revature.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class User {
 	
 	private String username;
 	
+	@JsonIgnore
 	private String password;
 	
 	private String fullName;
@@ -16,6 +19,11 @@ public class User {
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	
+	public User(UserDTO userDTO) {
+		this.username = userDTO.getUsername();
+		this.password = userDTO.getPassword();
 	}
 
 	public User(String username, String password, String fullName) {
