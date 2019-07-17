@@ -14,6 +14,9 @@ public class UserDao {
 	
 	public UserDao() {
 		userRepo = new ArrayList<User>();
+		userRepo.add(new User("nick", "1234", "Nick J"));
+		userRepo.add(new User("mah", "123", "Mohamad H"));
+		userRepo.add(new User("Dinosour", "dev123", "Donald H"));
 	}
 	
 	public User getUser(String username) {
