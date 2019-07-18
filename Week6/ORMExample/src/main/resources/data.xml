@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan
+		base-package="com.revature"></context:component-scan>
+
+	<bean id="myDataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="username"
+			value="#{ systemEnvironment['BEARS_USERNAME']}"></property>
+		<property name="password"
+			value="#{ systemEnvironment['BEARS_PASSWORD']}"></property>
+		<property name="url"
+			value="jdbc:postgresql://#{ systemEnvironment['BEARS_URL']}:5432/nick_1905java?"></property>
+		<property name="driverClassName"
+			value="org.postgresql.Driver"></property>
+	</bean>
+
+	<bean id="hibernateJpaVendorAdapter"
+		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"></bean>
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+
+		<property name="dataSource" ref="myDataSource"></property>
+		<property name="packagesToScan" value="com.revature.domains"></property>
+		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"></property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hiberante.format_sql">true</prop>
+				<prop key="hibernate.default_schema">bears</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.connection.pool_size">5</prop>
+				<prop key="hibernate.id.new_generator_mappings">false</prop>
+			</props>
+		</property>
+
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory"></property>
+	</bean>
+	
+	<tx:annotation-driven/>
+	<jpa:repositories base-package="com.revature.daos"></jpa:repositories>
+
+</beans>
