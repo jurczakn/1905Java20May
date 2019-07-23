@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: baseball-card
+  datasource:
+    url: jdbc:h2:mem:testdb;Mode=PostgreSQL
+    platform: h2
+  jpa:
+    hibernate:
+      ddl-auto: create
+      
+server:
+  port: 8082
