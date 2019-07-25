@@ -1,0 +1,18 @@
+#Zuul Configuration
+spring:
+  application:
+    name: zuul
+server:
+  port: 10000
+  
+#Local Routes
+zuul:
+  routes:
+    baseball:
+      url: http://localhost:8081
+    baseball-card:
+      url: http://localhost:8082
+      
+logging:
+  level:
+    com.revature.filter: TRACE

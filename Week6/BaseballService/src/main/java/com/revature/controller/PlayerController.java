@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.model.Player;
+import com.revature.model.Team;
 import com.revature.service.PlayerService;
 
 @RestController("/player")
@@ -38,8 +39,8 @@ public class PlayerController {
 		return playerService.getPlayer(playerName);
 	}
 	
-	@DeleteMapping("/player/{playerName}")
-	public String deletePlayer(@PathVariable String playerName) {
+	@DeleteMapping("/player/{playerName}/team/{teamName}")
+	public String deletePlayer(@PathVariable String playerName, @PathVariable String teamName) {
 		Player dropPlayer = new Player();
 		dropPlayer.setName(playerName);
 		playerService.dropPlayer(dropPlayer);
